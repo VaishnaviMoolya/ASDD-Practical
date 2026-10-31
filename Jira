@@ -1,0 +1,31 @@
+Aim: To study and implement the Agile software development lifecycle using Jira and understand DevOps pipeline integration.
+
+Requirements:
+- Internet connection
+- Jira account
+- Web browser
+Procedure:
+1. Open Google Chrome.
+2. Visit Jira official website.
+3. Sign up or log in using your account.
+4. Create a new Jira project.
+5. Select the Scrum or Kanban project template.
+6. Enter a project name, for example, Student Management System.
+7. Open the project dashboard.
+8. Create tasks (issues) for the project:
+   - User login
+   - Registration
+   - Dashboard development
+   - Database connection
+   - Testing
+9. Assign tasks to different team members.
+10. Set priorities and deadlines for each task.
+11. Move tasks across the workflow:
+    - To Do
+    - In Progress
+    - Done
+12. Create a sprint if you selected Scrum.
+13. Start the sprint and update the task status as work progresses.
+14. Open the project reports to view progress.
+15. Study how Jira can be integrated with GitHub and Jenkins to connect project management with development and deployment.
+Expected Output: A Jira project is created successfully with tasks, team members, deadlines and workflow status.
