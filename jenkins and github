@@ -1,0 +1,137 @@
+Aim: To integrate Jenkins with GitHub and create an automated CI/CD pipeline for building and testing a software project.
+
+Requirements:
+- Java JDK 21
+- Jenkins
+- Git
+- GitHub account
+- Internet connection
+Procedure:
+
+Step 1: Create a GitHub repository
+1. Open GitHub.
+2. Create a new repository named JenkinsProject.
+3. Select Public.
+4. Click Create Repository.
+Step 2: Create a sample project
+
+Create a folder named JenkinsProject.
+
+Inside it, create a file named index.html.
+
+Add:
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Jenkins CI/CD</title>
+</head>
+<body>
+    <h1>Hello from Jenkins</h1>
+    <p>My first CI/CD pipeline</p>
+</body>
+</html>
+
+
+Step 3: Upload the project to GitHub
+
+Open the terminal inside the project folder.
+
+Execute:
+git init
+
+
+git add .
+
+
+git commit -m "Initial commit"
+
+
+git branch -M main
+
+
+Connect your repository:
+git remote add origin https://github.com/USERNAME/JenkinsProject.git
+
+
+Push the code:
+git push -u origin main
+
+
+Replace USERNAME with your GitHub username.
+
+Step 4: Configure Jenkins
+1. Open http://localhost:8080.
+2. Click Manage Jenkins.
+3. Open Plugins.
+4. Install the Git plugin if it is not already installed.
+5. Restart Jenkins if requested.
+Step 5: Create a Jenkins pipeline job
+1. Click New Item.
+2. Enter GitHub-CI-CD.
+3. Select Pipeline.
+4. Click OK.
+Step 6: Connect GitHub repository
+
+In the Pipeline configuration:
+1. Find Pipeline.
+2. Select Pipeline script from SCM.
+3. Select Git.
+4. Enter your GitHub repository URL.
+5. Enter branch name */main.
+6. Save the configuration.
+Step 7: Create a Jenkinsfile
+
+Create a file named Jenkinsfile in your project folder.
+
+Add this code:
+pipeline {
+    agent any
+
+    stages {
+        stage('Build') {
+            steps {
+                echo 'Building Project'
+            }
+        }
+
+        stage('Test') {
+            steps {
+                echo 'Testing Project'
+            }
+        }
+
+        stage('Deploy') {
+            steps {
+                echo 'Deploying Project'
+            }
+        }
+    }
+}
+
+
+Upload the file to GitHub:
+git add .
+git commit -m "Added Jenkinsfile"
+git push origin main
+
+
+Step 8: Run the pipeline
+1. Open Jenkins.
+2. Select GitHub-CI-CD.
+3. Click Build Now.
+4. Open the build number.
+5. Click Console Output.
+6. Observe the Build, Test and Deploy stages.
+Step 9: Configure automatic triggering (optional)
+1. Install the GitHub integration/webhook plugin if required.
+2. In your Jenkins job, enable GitHub hook trigger for GITScm polling.
+3. In GitHub, open Settings → Webhooks → Add webhook.
+4. Enter your publicly reachable Jenkins webhook URL, ending in:
+/github-webhook/
+
+
+5. Select application/json.
+6. Save the webhook.
+For automatic triggering, Jenkins must be reachable by GitHub. localhost alone will not work for an external webhook.
+
+Expected Output: Jenkins successfully fetches code from GitHub and automatically executes the configured build, test and deployment stages when triggered.
