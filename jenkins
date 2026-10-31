@@ -1,0 +1,73 @@
+Aim: To install Jenkins, configure Java and execute a sample build job.
+
+Requirements:
+- Windows laptop
+- Java JDK 21
+- Jenkins
+- Internet connection
+You have previously used JDK 21 on Windows, so these steps use that setup.
+
+Procedure:
+
+Step 1: Check Java installation
+
+Open Command Prompt and type:
+java -version
+
+
+Check whether Java 21 is installed.
+
+If not, download it from Eclipse Temurin.
+
+Step 2: Download Jenkins
+1. Open Jenkins official website.
+2. Select the Windows installer.
+3. Download the .msi file.
+4. Run the installer.
+5. Follow the installation instructions.
+6. Keep the default port 8080.
+Step 3: Start Jenkins
+1. Open your browser.
+2. Enter:
+http://localhost:8080
+
+
+3. Jenkins will ask for an administrator password.
+4. Open the following file:
+C:\ProgramData\Jenkins\.jenkins\secrets\initialAdminPassword
+
+
+5. Copy the password and paste it into Jenkins.
+
+Step 4: Install plugins
+1. Select Install suggested plugins.
+2. Wait until installation finishes.
+3. Create your administrator username and password.
+4. Click Save and Finish.
+Step 5: Create a new Jenkins job
+1. Open the Jenkins dashboard.
+2. Click New Item.
+3. Enter the project name: HelloWorld.
+4. Select Freestyle Project.
+5. Click OK.
+Step 6: Configure the build
+1. Scroll down to Build Steps.
+2. Click Add build step.
+3. Select Execute Windows batch command.
+4. Enter:
+echo Hello World
+echo Welcome to Jenkins
+
+
+5. Click Save.
+
+Step 7: Execute the build
+1. Open the HelloWorld project.
+2. Click Build Now.
+3. Wait for the build to complete.
+4. Click the build number.
+5. Open Console Output.
+Expected Output:
+Hello World
+Welcome to Jenkins
+Finished: SUCCESS
