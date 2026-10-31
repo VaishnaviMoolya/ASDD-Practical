@@ -1,0 +1,78 @@
+Aim: To understand Kubernetes and deploy an application using Minikube.
+
+Requirements:
+- Windows laptop
+- Docker Desktop
+- Minikube
+- kubectl
+Procedure:
+
+Step 1: Install Docker Desktop
+1. Visit Docker Desktop.
+2. Download and install Docker Desktop.
+3. Start Docker Desktop.
+4. Wait until Docker is running.
+Step 2: Install Minikube
+
+Visit Minikube official documentation.
+
+Download and install Minikube for Windows.
+
+Step 3: Install kubectl
+
+Visit Kubernetes kubectl installation.
+
+Install kubectl.
+
+Verify installation:
+kubectl version --client
+
+
+Step 4: Start Minikube
+
+Open PowerShell:
+minikube start --driver=docker
+
+
+Wait until the cluster starts.
+
+Step 5: Check cluster status
+minikube status
+
+
+Step 6: Create a deployment
+kubectl create deployment myapp --image=nginx
+
+
+This creates an application deployment using the Nginx image.
+
+Step 7: Check deployments
+kubectl get deployments
+
+
+Step 8: Check running pods
+kubectl get pods
+
+
+Step 9: Expose the application
+kubectl expose deployment myapp --type=NodePort --port=80
+
+
+Step 10: Open the application
+minikube service myapp
+
+
+The browser will open the Nginx application.
+
+Step 11: Delete the deployment
+kubectl delete service myapp
+
+
+kubectl delete deployment myapp
+
+
+Step 12: Stop Minikube
+minikube stop
+
+
+Expected Output: A Kubernetes cluster is created successfully and an Nginx application is deployed and accessed through Minikube.
