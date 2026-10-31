@@ -1,0 +1,49 @@
+How to Download Grafana:
+•	1) Go to the official Grafana download website.
+•	2) Select the Windows version.
+•	3) Download and save the .msi installer file.
+
+How to Install Grafana:
+1.	Locate the .msi installer file that you previously downloaded to your computer.
+2.	Double-click to launch the installer.
+3.	Follow the setup wizard instructions.
+4.	Click “Install”. Wait for the installation to be completed.
+5.	Start Grafana via Services:
+•	net start Grafana
+
+How to Set Up Grafana:
+1.	Launch Grafana from the Start menu.
+2.	Open a web browser and go to: http://localhost:3000
+3.	Log in with the default credentials  (Username: admin Password: admin) and update the password. 
+4.	Add and configure data sources.
+5.	Create dashboards.
+
+How to Use the Grafana Dashboard:
+•	1) Access the Dashboard:
+•	Open Grafana in a web browser.
+•	Log in with your credentials.
+•	2) Create a New Dashboard:
+•	Click the “+ Create” icon.
+•	Select “Dashboard”.
+•	Select “Add new panel”.
+•	3) Add Panels:
+•	Choose a connected data source.
+•	Define and write using PromQL, SQL, or other supported languages to retrieve metrics.
+•	Select the visualization type (graph, gauge, table).
+•	4) Customize Visualizations and Layouts:
+•	Select visualization types such as graphs, tables, or heatmaps.
+•	Adjust axes, labels, and thresholds.
+•	Drag panels to rearrange.
+•	Resize for better visibility.
+•	Group related metrics.
+•	5) Apply Grafana Config Options and Set Alerts:
+•	Modify panel settings.
+•	Set refresh intervals.
+•	To set alert rules:
+•	Go to Alerting -> Alert rules.
+•	Define conditions (e.g., CPU > 80%).
+•	Choose notification channels (email, Slack, webhook).
+•	6) Save and Share:
+•	Click on Save dashboard.
+•	Share via link or export options.
+
