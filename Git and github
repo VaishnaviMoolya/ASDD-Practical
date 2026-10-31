@@ -1,0 +1,92 @@
+Aim: To perform basic Git version control operations and understand collaboration in software development.
+
+Requirements:
+- Git installed
+- GitHub account
+- VS Code or Command Prompt
+Procedure:
+
+Step 1: Install Git
+1. Visit Git official download page.
+2. Download Git for Windows.
+3. Install it using the default settings.
+4. Open Git Bash or Command Prompt.
+Step 2: Check Git version
+
+Execute:
+git --version
+
+
+Expected output: Git version is displayed.
+
+Step 3: Configure Git username and email
+git config --global user.name "Your Name"
+
+
+git config --global user.email "your-email@gmail.com"
+
+
+Check configuration:
+git config --list
+
+
+Step 4: Create a local repository
+mkdir GitProject
+
+
+cd GitProject
+
+
+Step 5: Initialize Git
+git init
+
+
+This creates a Git repository in your project folder.
+
+Step 6: Create a README file
+echo "# My First Git Project" > README.md
+
+
+Step 7: Check repository status
+git status
+
+
+Step 8: Add files to the staging area
+git add README.md
+
+
+To add all files:
+git add .
+
+
+Step 9: Commit changes
+git commit -m "Initial commit"
+
+
+Step 10: Create a GitHub repository
+1. Open GitHub.
+2. Log in.
+3. Click the + icon.
+4. Select New Repository.
+5. Enter repository name: GitProject.
+6. Click Create Repository.
+Step 11: Connect local repository to GitHub
+
+Copy your GitHub repository URL and execute:
+git branch -M main
+
+
+git remote add origin https://github.com/USERNAME/GitProject.git
+
+
+Replace USERNAME with your GitHub username.
+
+Step 12: Push code to GitHub
+git push -u origin main
+
+
+Step 13: Verify
+
+Open your GitHub repository and refresh the page. You should see the README file.
+
+Expected Output: A local Git repository is created, committed and successfully uploaded to GitHub.
