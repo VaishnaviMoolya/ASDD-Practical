@@ -4,6 +4,7 @@ Develop with containers | Docker Docs
 2.	 git clone https://github.com/docker/getting-started-todo-app
 And after the project is cloned, navigate into the new directory created by the clone:
  cd getting-started-todo-app
+ dir
 3.	Once you have the project, start the development environment using Docker Compose.
 To start the project using the CLI, run the following command:
 
